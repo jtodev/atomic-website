@@ -1,0 +1,49 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon"  href="/logo_atomic-1.jpg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Atomic Café</title>
+	</head>
+	<body>
+		<Header></Header>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;	
+		--accent-gradient: linear-gradient(
+			45deg,
+			green,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: white;
+		background-size: 224px;
+	}
+	.center {
+		text-align: center;
+		margin: 0 0 0 0;
+	}
+	table {
+		margin: auto;
+	}
+</style>

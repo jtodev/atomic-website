@@ -1,0 +1,78 @@
+<header>
+    <a href="/">
+        <img src="../../public/logo_atomic.jpg" alt="Atomic-Logo" class="logo">
+    </a>
+
+    <a href="/">
+        <p><span class="atomic">Atomic</span> <br> Das Studi-Café im EW 021</p>
+    </a>
+
+    <p class="link-header">
+        <a class="hover-underline-animation" href="/news/">
+            Neuigkeiten <span>&rarr;</span>
+        </a>
+    </p>
+
+    <p class="link-header">
+        <a class="hover-underline-animation" href="/pricing/">
+            Preise <span>&rarr;</span>
+        </a>
+    </p>
+
+    <p class="link-header">
+        <a class="hover-underline-animation" href="/pricing/">
+            Atomic-Konsent <span>&rarr;</span>
+        </a>
+    </p>
+
+    <p class="link-header">
+        <a class="hover-underline-animation" href="/pricing/">
+            Über's Atomic <span>&rarr;</span>
+        </a>
+    </p>
+</header>
+
+<style>
+    header {
+		padding: 0;
+		margin: 0;
+		background-color: white;
+		text-align: left;
+		display: flex;
+	}
+	header a {
+		color: black;
+		text-decoration: none;
+	}
+	.logo {
+		width: 100px;
+		margin-right: 1%;
+	}
+	.link-header {
+		margin: auto;
+	}
+	.atomic {
+		font-weight: bold;
+		font-size:xx-large;
+	}
+	.hover-underline-animation {
+		display: inline-block;
+		position: relative;
+	}
+	.hover-underline-animation:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		transform: scaleX(0);
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: #068c0a;
+		transform-origin: bottom right;
+		transition: transform 0.25s ease-out;
+	}
+	.hover-underline-animation:hover:after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
+</style>

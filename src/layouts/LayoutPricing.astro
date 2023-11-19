@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Base.astro';
+const { content } = Astro.props;
+---
+
+<Layout title={content.title}>
+    <h1>{content.title}</h1>
+    <slot />
+</Layout>
