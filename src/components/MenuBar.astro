@@ -14,6 +14,12 @@
     </p>
 
     <p class="link-header">
+        <a class="hover-underline-animation" href="/news/">
+            Plena <span>&rarr;</span>
+        </a>
+    </p>
+
+    <p class="link-header">
         <a class="hover-underline-animation" href="/pricing/">
             Preise <span>&rarr;</span>
         </a>
@@ -30,15 +36,30 @@
             Über's Atomic <span>&rarr;</span>
         </a>
     </p>
+
+    <p class="link-header">
+        <a class="hover-underline-animation" href="/pricing/">
+            Links <span>&rarr;</span>
+        </a>
+    </p>
+
+    <p class="address">
+        EW 021 <br>
+        Hardenbergstr. 36 <br>
+        10623 Berlin
+    </p>
 </header>
 
 <style>
     header {
-		padding: 0;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20%;
+		padding: 1%;
 		margin: 0;
 		background-color: white;
-		text-align: left;
-		display: flex;
 	}
 	header a {
 		color: black;
@@ -55,6 +76,10 @@
 		font-weight: bold;
 		font-size:xx-large;
 	}
+    .address {
+        position: fixed;
+        bottom: 0;
+    }
 	.hover-underline-animation {
 		display: inline-block;
 		position: relative;

@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Base.astro';
+import Base from '../layouts/Base.astro';
 const { content } = Astro.props;
 ---
 
-<Layout title={content.title}>
+<Base title={content.date}>
     <h1>{content.title}</h1>
     <slot />
-</Layout>
+</Base>

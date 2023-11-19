@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+const { content } = Astro.props;
+---
+
+<Base title="Plenum">
+    <h1 class="center">Plenum vom {content.date}</h1>
+
+    <div class="box-meta">
+        <p><strong>Datum:</strong> <br> {content.date}</p>
+        <p><strong>Protokollant:</strong> <br> {content.recorder}</p>
+        <p><strong>Anwesende:</strong> <br> {content.attendants}</p>
+        <p><strong>Startzeit:</strong> <br> {content.startTime.slice(0,2)}:{content.startTime.slice(2,4)}</p>
+        <p><strong>Endzeit:</strong> <br> {content.endTime.slice(0,2)}:{content.endTime.slice(2,4)}</p>
+    </div>
+
+    <div class="box-course">
+        <slot />
+    </div>
+</Base>
+
+<style>
+    .box-meta {
+        width: 20%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    .box-course {
+        width: 50%;
+        margin: auto;
+    }
+</style>
